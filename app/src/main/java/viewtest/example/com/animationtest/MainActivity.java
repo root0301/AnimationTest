@@ -8,6 +8,7 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.BounceInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +40,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 ObjectAnimator anim1 = ObjectAnimator.ofFloat(testView,"rotation",0f,360f);
                 anim1.setDuration(5000);
                 anim1.start();
+                /**
+                 * ViewPropertyAnimator的用法
+                 */
+/*                testView.animate().x(500).y(500).setDuration(5000)
+                    .setInterpolator(new BounceInterpolator());*/
                 break;
             case R.id.tra_bt:
                 float cuX = testView.getTranslationX();
